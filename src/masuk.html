@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KALA - Login</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Flowbite CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+</head>
+
+<body class="h-screen overflow-hidden">
+    <div class="flex h-full">
+        <!-- Left side (image) -->
+        <div class="w-1/2 relative">
+            <!-- Background image -->
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvcHBpbmd8ZW58MHx8MHx8fDA%3D"
+                alt="Background KALA" class="w-full h-full object-cover absolute inset-0">
+
+            <!-- Dark overlay -->
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+            <!-- Text content -->
+            <div class="relative z-10 h-full flex flex-col justify-center p-12 text-white">
+                <h1 class="text-6xl font-bold mb-6">Mulai Jadi bagian dari KALA</h1>
+                <p class="text-md mb-4">Ubah caramu bergaya-dengan membeli produk premium dari kami</p>
+                <p class="text-md mb-8">Buat akun sekarang dan dapatkan akses ke penawaran ekslusif selama 30 hari</p>
+                <p class="text-gray-300">Tanpa biaya, tanpa kartu kredit. Telah dipercaya oleh ribuan konsumen</p>
+            </div>
+        </div>
+
+        <!-- Right side (login form) -->
+        <div class="w-1/2 bg-white p-12 flex flex-col justify-center">
+            <h2 class="text-3xl font-bold mb-8 text-gray-800">Masuk Ke Akun Anda</h2>
+
+            <form class="space-y-6">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                    <input type="text" id="name" name="name"
+                        class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-black focus:border-black">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" id="email" name="email"
+                        class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-black focus:border-black">
+                </div>
+
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                    <input type="password" id="password" name="password"
+                        class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-black focus:border-black">
+                </div>
+
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <input id="remember-me" name="remember-me" type="checkbox"
+                            class="h-4 w-4 text-black focus:ring-black border-gray-300 rounded">
+                        <label for="remember-me" class="ml-2 block text-sm text-gray-700">Ingat saya</label>
+                    </div>
+
+                    <div class="text-sm">
+                        <a href="#" class="font-medium text-black hover:text-gray-600">Lupa password?</a>
+                    </div>
+                </div>
+
+                <div>
+                    <!-- Fixed login button - now properly using a link -->
+                    <a href="berandahome.html"
+                        class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black">
+                        Masuk
+                    </a>
+
+                    <div class="flex justify-center my-4">
+                        <span class="text-gray-500">Atau</span>
+                    </div>
+
+                    <div class="flex justify-center p-4 space-x-4">
+                        <a href="#" class="hover:opacity-80">
+                            <img src="https://cdn-icons-png.flaticon.com/128/300/300221.png" alt="Email"
+                                class="w-7 h-7">
+                        </a>
+
+                        <a href="#" class="hover:opacity-80">
+                            <img src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png" alt="Facebook"
+                                class="w-7 h-7">
+                        </a>
+                    </div>
+                </div>
+            </form>
+
+            <div class="mt-6 text-center text-sm">
+                <p class="text-gray-600">
+                    Belum punya akun?
+                    <a href="daftar.html" class="font-medium text-black hover:text-gray-600">Daftar sekarang</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Flowbite JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+
+</html>

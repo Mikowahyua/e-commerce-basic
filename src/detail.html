@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="../dist/output.css">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <link href="/website/css/uicons-bold-rounde" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="bg-gray-100 sticky top-0 z-50">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between px-4 py-2 mx-auto p-4">
+            <a href="#" class="flex items-center space-x-3">
+                <span class="self-center text-2xl font-semibold whitespace-nowrap">Kalapedia</span>
+    
+                <a href="#"
+                    class="text-black text-xs font-semibold px-2.5 py-0.5 rounded-sm bg-gray-200 border-gray-400 ml-4">Kategori</a>
+            </a>
+    
+            <div class="flex-1 px-6">
+                <div class="relative">
+                    <input type="text" placeholder="Cari di KALA"
+                        class="w-full pl-10 pr-4 py-2 border rounded-lg border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                </div>
+            </div>
+    
+            <div class="flex space-x-6 mr-6">
+                <a href="cart.html" class="flex items-center gap-2 text-gray-700 hover:text-blue-600">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png" alt="Cart" class="w-5 h-5">
+                </a>
+                <a href="#" class="flex items-center gap-2 text-gray-700 hover:text-blue-600">
+                    <img src="https://cdn-icons-png.flaticon.com/128/3193/3193015.png" alt="Heart" class="w-5 h-5">
+                </a>
+                <a href="#" class="flex items-center gap-2 text-gray-700 hover:text-blue-600">
+                    <img src="https://cdn-icons-png.flaticon.com/128/1827/1827422.png" alt="Profile" class="w-5 h-5">
+                </a>
+            </div>
+    
+            <div class="flex space-x-4">
+    
+                <a href="#"
+                    class=" text-black text-xs font-semibold me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-200   border-gray-400 inline-flex items-center justify-center"
+                    aria-current="page">Beranda</a>
+                <a href="#"
+                    class=" text-black text-xs font-semibold me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-200   border-gray-400 inline-flex items-center justify-center"
+                    aria-current="page">Promo</a>
+                <a href="#"
+                    class=" text-black text-xs font-semibold me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-200   border-gray-400 inline-flex items-center justify-center"
+                    aria-current="page">Tentang Kami</a>
+                <a href="propil.html">
+                    <button type="button"
+                        class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                        aria-expanded="false" data-dropdown-toggle="dropdown-user">
+                        <span class="sr-only">Open user menu</span>
+                        <img class="w-8 h-8 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+                            alt="user photo"></button></a>
+            </div>
+    </nav>
+
+    <div class="ml-6 py-8">
+        <a href="berandahome.html">
+        <button class="bg-black hover:bg-gray-800 rounded-xl w-24 h-10">
+<span class="text-white text-xl font-bold">Kembali</span>
+        </button>
+    </a>
+    </div>
+
+    <!-- Product Detail Section -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+            <div class="grid md:grid-cols-2 gap-8 p-6" id="product-container">
+                <!-- Product Images -->
+                <div>
+                    <!-- Main Image -->
+                    <div class="mb-4 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center h-96">
+                        <img id="main-image" src="https://via.placeholder.com/600" alt="Product"
+                            class="object-contain h-full w-full">
+                    </div>
+    
+                    <!-- Thumbnail Gallery -->
+                    <div class="flex space-x-3 overflow-x-auto product-gallery py-2" id="thumbnail-gallery">
+                        <!-- Thumbnails will be added dynamically -->
+                    </div>
+                </div>
+    
+                <!-- Product Info -->
+                <div>
+                    <h1 class="text-3xl font-bold text-gray-900 mb-2" id="product-title" data-id="produk1">Loading...</h1>
+    
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400 mr-2" id="product-rating">
+                            <!-- Rating stars will be added dynamically -->
+                        </div>
+                        <span class="text-gray-500 text-sm" id="review-count">(0 ulasan)</span>
+                        <span class="ml-4 px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full"
+                            id="stock-status">Tersedia</span>
+                    </div>
+    
+                    <div class="mb-6">
+                        <span class="text-3xl font-bold text-gray-900" id="product-price">Rp 0</span>
+                    </div>
+    
+                    <div class="mb-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Deskripsi Produk</h3>
+                        <p class="text-gray-600" id="product-description">Loading...</p>
+                    </div>
+    
+                    <div class="mb-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Kategori</h3>
+                        <p class="text-gray-600" id="product-category">Loading...</p>
+                    </div>
+    
+                    <div class="flex items-center mb-8">
+                        <div class="flex items-center border border-gray-300 rounded-lg mr-4">
+                            <button class="px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-l-lg" id="decrease-qty" title="kurangi jumlah">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                            <span class="px-4 py-2 border-x border-gray-300" id="quantity">1</span>
+                            <button class="px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-r-lg" id="increase-qty"title="tambah jumlah">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <button id="addToCartBtn" data-id="keranjang-items"
+                            class="ml-2 flex-1 bg-black hover:bg-gray-800 text-white font-medium py-3 px-6 rounded-lg transition duration-200">
+                            <i class="fas fa-shopping-cart mr-2"></i> Tambah ke Keranjang
+                        </button>
+                        <button id="checkout-btn" onclick="prosesCheckout()"
+                            class="ml-2 flex-1 bg-black hover:bg-gray-800 text-white font-medium py-3 px-6 rounded-lg transition duration-200">
+                            Checkout
+                        </button>
+                    </div>
+    
+                    <div class="border-t border-gray-200 pt-4">
+                        <div class="flex items-center text-gray-600 mb-2">
+                            <i class="fas fa-truck mr-2"></i>
+                            <span>Gratis ongkir seluruh Indonesia</span>
+                        </div>
+                        <div class="flex items-center text-gray-600 mb-2">
+                            <i class="fas fa-shield-alt mr-2"></i>
+                            <span>Garansi resmi 1 tahun</span>
+                        </div>
+                        <div class="flex items-center text-gray-600">
+                            <i class="fas fa-undo mr-2"></i>
+                            <span>Bebas retur dalam 14 hari</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Product Tabs -->
+        <div class="bg-white rounded-xl shadow-sm mt-6 overflow-hidden">
+            <ul class="flex border-b border-gray-200" id="product-tabs">
+                <li class="mr-1">
+                    <button
+                        class="tab-button bg-white inline-block py-3 px-6 font-medium border-b-2 border-blue-500 text-blue-600">Deskripsi</button>
+                </li>
+                <li class="mr-1">
+                    <button
+                        class="tab-button bg-white inline-block py-3 px-6 font-medium border-b-2 border-transparent hover:text-blue-600">Spesifikasi</button>
+                </li>
+            </ul>
+    
+            <div class="p-6" id="tab-content">
+                <div class="prose max-w-none" id="product-details">
+                    <!-- Product details will be added dynamically -->
+                </div>
+            </div>
+            </div>
+    
+        <!-- Related Products -->
+        <div class="mt-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Produk Terkait</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="related-products">
+                <!-- Related products will be added dynamically -->
+                <div class="text-center py-8">Memuat produk terkait...</div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="bg-black pt-12 pb-6 ">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+    
+                <div>
+                    <h3 class="text-lg font-bold text-gray-800 dark:text-white mb-4">KalaPedia</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#"
+                                class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition flex items-center">
+                                <i class="fi fi-rr-angle-right mr-2 text-xs"></i> Tentang Kalapedia
+                            </a></li>
+                        <li><a href="#"
+                                class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition flex items-center">
+                                <i class="fi fi-rr-angle-right mr-2 text-xs"></i> Karir
+                            </a></li>
+                        <li><a href="#"
+                                class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition flex items-center">
+                                <i class="fi fi-rr-angle-right mr-2 text-xs"></i> Blog & Info
+                            </a></li>
+                        <li><a href="#"
+                                class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition flex items-center">
+                                <i class="fi fi-rr-angle-right mr-2 text-xs"></i> Promo & Diskon
+                            </a></li>
+                        <li><a href="#"
+                                class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition flex items-center">
+                                <i class="fi fi-rr-angle-right mr-2 text-xs"></i> Beli Produk Lokal
+                            </a></li>
+                        <li><a href="#"
+                                class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition flex items-center">
+                                <i class="fi fi-rr-angle-right mr-2 text-xs"></i> Bantuan & FAQ
+                            </a></li>
+                    </ul>
+                </div>
+    
+                <!-- Hubungi Kami Section -->
+                <div>
+                    <h3 class="text-lg font-bold text-gray-800 dark:text-white mb-4">Hubungi Kami</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#"
+                                class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition flex items-center">
+                                <i class="fi fi-rr-angle-right mr-2 text-xs"></i> Layanan Pelanggan
+                            </a></li>
+                        <li><a href="#"
+                                class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition flex items-center">
+                                <i class="fi fi-rr-angle-right mr-2 text-xs"></i> Jaminan Layanan
+                            </a></li>
+                        <li><a href="#"
+                                class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition flex items-center">
+                                <i class="fi fi-rr-angle-right mr-2 text-xs"></i> Info Layanan Lainnya
+                            </a></li>
+                    </ul>
+                </div>
+    
+                <!-- Layanan Lain Section -->
+                <div>
+                    <h3 class="text-lg font-bold text-gray-800 dark:text-white mb-4">Layanan Lain</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#"
+                                class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition flex items-center">
+                                <i class="fi fi-rr-angle-right mr-2 text-xs"></i> Pembayaran Tagihan
+                            </a></li>
+                        <li><a href="#"
+                                class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition flex items-center">
+                                <i class="fi fi-rr-angle-right mr-2 text-xs"></i> Cicilan Tanpa Kartu Kredit
+                            </a></li>
+                        <li><a href="#"
+                                class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition flex items-center">
+                                <i class="fi fi-rr-angle-right mr-2 text-xs"></i> Voucher & Game
+                            </a></li>
+                    </ul>
+                </div>
+    
+                <!-- Follow Us Section -->
+                <div>
+                    <h3 class="text-lg font-bold text-gray-800 dark:text-white mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">
+                            <img src="https://cdn-icons-png.flaticon.com/128/733/733547.png" alt="Cart" class="w-5 h-5">
+                        </a>
+                        <a href="#"
+                            class="text-gray-600 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 transition">
+                            <img src="https://cdn-icons-png.flaticon.com/128/2111/2111463.png" alt="Cart" class="w-5 h-5">
+                        </a>
+                        <a href="#"
+                            class="text-gray-600 dark:text-gray-300 hover:text-red-600 dark:hover:text-red-400 transition">
+                            <img src="https://cdn-icons-png.flaticon.com/128/1384/1384060.png" alt="Cart" class="w-5 h-5">
+                        </a>
+                    </div>
+    
+                    <div class="mt-6">
+                        <h4 class="font-medium text-gray-800 dark:text-white mb-2">Download App</h4>
+                        <div class="flex space-x-2">
+                            <a href="#" class="bg-black text-white p-2 rounded flex items-center">
+                                <i class="fi fi-brands-apple mr-2"></i>
+                                <img src="data:image/png;base64,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"
+                                    alt="playstore" class="w-15 h-10">
+                            </a>
+                            <a href="#" class="bg-black text-white p-2 rounded flex items-center">
+                                <i class="fi fi-brands-google-play mr-2"></i>
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZ0AAAB6CAMAAABTN34eAAAAjVBMVEUAAAD///+mpqapqamBgYF+fn6a
+                      mpoHBweFhYVERESioqL39/f8/PzIyMju7u7z8/PU1NRdXV3n5+eNjY3BwcF4eHi4uLglJSUtLS3h4eETExOvr68eHh45OTlYWFi6urrZ2dlNTU1t
+                      bW1mZmYRERHPz89GRkaVlZVQUFA7OztcXFwiIiIzMzMrKytqampGF1FnAAAS+UlEQVR4nO1d62KiOhAWqDeuikhVrOBdt7bv/3gnl0lISKyE1dXd
+                      w/ejRSQhzJfMTCZD7FgM3jxIHbvFc+GkwZxTYnXgf5i4LvquxbNhu64beDI7gYuZOQ66LZ6LwTFDBNkjgR0vQ+RMTrtOi+djOT4ifnKfseNlttM7
+                      PLtVLTh+2Y6b+sAOImewfHaLWgi49Bw3p+wErjPoP7s9LSR8IXr2mJ3QtXvtyHk1fCDvOkLs5LbT2pzXw8ZxE6vjuc7k2S1poWLh2q7fmbvO6dkta
+                      aHB1HHnncR2Fs9uSAsNhpkddDL7+Ox2tNBhkdlpx3EGz25HCx12ru10bKf77Ha00KHfs+2WnVdFy84ro2XnldGy88p4EDsHd2RN71zn/xAPYWdKls
+                      XfzAvuPj/v14qRZRnHp4Y4ZH8XjC0r/O1KHsDOoaBLroZjZxx7no/gxc73XdrRsqNBjyWTbM3KTcs0FGv+6w4NadlRkTAJ+0Ozgogd79idDlIy9O7
+                      QoCews/t2Ejh8SXaSsv8blkTsxPRoHJqPPA2ewA6iZFQevhw7TqmdMsOiJTudRYzI/e2oectOBd+C7TBdMRLYwY9mbfgHN0ncMXzYTqcHONiQRIhd
+                      d0qu3EyRLzF29ikvJ7JzmKRBNp3xmw27WVBWSu5iB2l3+aFj5/yWBengzD6SO63sIJ9WMjHOUxc9w2ba/eowdqZZYAuC6G+yfXKsr/Lvyg7u8wyj25fLENnpIJc8oEcnSFot1uRjblkpOY
+                      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
+                      Pndc2w3Jxlp8AZMgOhxsuPgrcVzMelliBsbXtBlW/mFievaiKEWT4btum7AkiXLjRa9eZA6dovnIksDIRP5P3lvOlDIOGffAAAAAElFTkSuQmCC"
+                                    alt="appstore" class="w-15 h-10">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div
+                class="border-t border-gray-200 dark:border-gray-700 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-600 dark:text-gray-300 text-sm mb-4 md:mb-0">
+                    © 2025 Kalapedia. All rights reserved.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-sm">Terms
+                        of Service</a>
+                    <a href="#"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-sm">Privacy
+                        Policy</a>
+                    <a href="#"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-sm">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+   
+    <script src="script.js"></script>
+
+    <script>
+        function prosesCheckout() {
+            console.log("Tombol checkout diklik");
+            const checkoutBtn = document.getElementById('checkout-btn');
+            const keranjang = JSON.parse(localStorage.getItem('keranjang')) || [];
+            console.log("Keranjang:", keranjang);
+            
+            const selectedItems = [];
+            document.querySelectorAll('.item-checkbox:checked').forEach(cb => {
+             const index = parseInt(cb.dataset.index);
+                selectedItems.push(keranjang[index]);
+            });
+        
+            console.log("Selected items:", selectedItems);
+        
+            if (selectedItems.length === 0) {
+
+                return;
+            }
+        
+            localStorage.setItem('checkoutItems', JSON.stringify(selectedItems));
+            window.location.href = 'checkout.html';
+        }
+        
+        
+    
+    </script>
+        
+        
+</body>
+</html>

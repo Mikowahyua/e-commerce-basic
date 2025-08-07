@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/output.css">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <link href="/website/css/uicons-bold-rounde" rel="stylesheet">
+    <title>Document</title>
+</head>    <body class="bg-gray-50">
+
+    <nav class="bg-gray-100 sticky top-0 z-50">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between px-4 py-2 mx-auto p-4">
+            <a href="#" class="flex items-center space-x-3">
+                <span class="self-center text-2xl font-semibold whitespace-nowrap">Kalapedia</span>
+    
+                <a href="#"
+                    class="text-black text-xs font-semibold px-2.5 py-0.5 rounded-sm bg-gray-200 border-gray-400 ml-4">Kategori</a>
+            </a>
+    
+            <div class="flex-1 px-6">
+                <div class="relative">
+                    <input type="text" placeholder="Cari di KALA"
+                        class="w-full pl-10 pr-4 py-2 border rounded-lg border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                </div>
+            </div>
+    
+            <div class="flex space-x-6 mr-6">
+                <a href="cart.html" class="flex items-center gap-2 text-gray-700 hover:text-blue-600">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png" alt="Cart" class="w-5 h-5">
+                </a>
+                <a href="#" class="flex items-center gap-2 text-gray-700 hover:text-blue-600">
+                    <img src="https://cdn-icons-png.flaticon.com/128/3193/3193015.png" alt="Heart" class="w-5 h-5">
+                </a>
+                <a href="#" class="flex items-center gap-2 text-gray-700 hover:text-blue-600">
+                    <img src="https://cdn-icons-png.flaticon.com/128/1827/1827422.png" alt="Profile" class="w-5 h-5">
+                </a>
+            </div>
+    
+            <div class="flex space-x-4">
+    
+                <a href="#"
+                    class=" text-black text-xs font-semibold me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-200   border-gray-400 inline-flex items-center justify-center"
+                    aria-current="page">Beranda</a>
+                <a href="#"
+                    class=" text-black text-xs font-semibold me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-200   border-gray-400 inline-flex items-center justify-center"
+                    aria-current="page">Promo</a>
+                <a href="#"
+                    class=" text-black text-xs font-semibold me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-200   border-gray-400 inline-flex items-center justify-center"
+                    aria-current="page">Tentang Kami</a>
+                <a href="propil.html">
+                    <button type="button"
+                        class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                        aria-expanded="false" data-dropdown-toggle="dropdown-user">
+                        <span class="sr-only">Open user menu</span>
+                        <img class="w-8 h-8 rounded-full"
+                            src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+                            alt="user photo"></button></a>
+            </div>
+    </nav>
+        <div class="container mx-auto px-4 py-8 max-w-4xl">
+            <div class="bg-white rounded-xl shadow-sm p-8">
+                <div class="text-center mb-8">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                    <h1 class="text-2xl font-bold text-gray-800 mb-2">Pesanan Berhasil!</h1>
+                    <p class="text-gray-600">Terima kasih telah berbelanja di toko kami</p>
+                </div>
+    
+                <div class="border-b pb-6 mb-6">
+                    <h2 class="text-lg font-semibold mb-4">Ringkasan Pesanan</h2>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-600">No. Pesanan</span>
+                        <span class="font-medium" id="order-id"></span>
+                    </div>
+                    <div class="flex justify-between items-center mt-2">
+                        <span class="text-gray-600">Tanggal</span>
+                        <span id="order-date"></span>
+                    </div>
+                </div>
+    
+                <div class="mb-8">
+                    <h3 class="text-lg font-semibold mb-4">Produk Dipesan</h3>
+                    <div id="order-items" class="space-y-4 mb-6">
+                        <!-- Items will be loaded here -->
+                    </div>
+    
+                    <div class="space-y-2 border-t pt-4">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Subtotal</span>
+                            <span id="subtotal"></span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Ongkos Kirim</span>
+                            <span id="shipping-cost"></span>
+                        </div>
+                        <div class="flex justify-between font-semibold text-lg pt-2">
+                            <span>Total Pembayaran</span>
+                            <span id="total"></span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3">Alamat Pengiriman</h3>
+                        <div id="shipping-info" class="text-gray-700 space-y-1">
+                            <!-- Shipping info will be loaded here -->
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3">Metode Pembayaran</h3>
+                        <div id="payment-method" class="text-gray-700">
+                            <!-- Payment method will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="mt-8 pt-6 border-t text-center">
+                    <p class="text-gray-500 mb-4">Pesanan akan dikirim dalam 1-2 hari kerja</p>
+                    <a href="berandahome.html"
+                        class="inline-block px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium">
+                        Kembali ke Beranda
+                    </a>
+                </div>
+            </div>
+            </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+                const orderData = JSON.parse(localStorage.getItem('orderData'));
+
+                if (orderData) {
+                    // Display order info
+                    document.getElementById('order-id').textContent = orderData.orderId;
+                    document.getElementById('order-date').textContent = new Date(orderData.date).toLocaleDateString('id-ID');
+
+                    // Display items
+                    const orderItemsContainer = document.getElementById('order-items');
+                    orderData.items.forEach(item => {
+                        const itemEl = document.createElement('div');
+                        itemEl.className = 'flex justify-between items-center';
+                        itemEl.innerHTML = `
+                            <div class="flex items-center gap-3">
+                                <img src="${item.image}" alt="${item.title}" class="w-12 h-12 object-contain rounded">
+                                <div>
+                                    <p class="font-medium">${item.title}</p>
+                                    <p class="text-sm text-gray-500">${item.quantity} x $${item.price.toFixed(2)}</p>
+                                </div>
+                            </div>
+                            <p class="font-medium">$${(item.price * item.quantity).toFixed(2)}</p>
+                        `;
+                        orderItemsContainer.appendChild(itemEl);
+                    });
+
+                    // Display totals
+                    document.getElementById('subtotal').textContent = `$${orderData.subtotal.toFixed(2)}`;
+                    document.getElementById('shipping-cost').textContent = `$${orderData.shipping.toFixed(2)}`;
+                    document.getElementById('total').textContent = `$${orderData.total.toFixed(2)}`;
+
+                    // Display shipping info
+                    if (orderData.shippingInfo) {
+                        const shippingInfo = document.getElementById('shipping-info');
+                        shippingInfo.innerHTML = `
+                            <p class="font-medium">${orderData.shippingInfo.nadep} ${orderData.shippingInfo.nabel || ''}</p>
+                            <p>${orderData.shippingInfo.alamat}</p>
+                            <p>${orderData.shippingInfo.kota}, ${orderData.shippingInfo.kodepos || ''}</p>
+                            <p>Telp: ${orderData.shippingInfo.tel}</p>
+                        `;
+                    }
+
+                    // Display payment method
+                    document.getElementById('payment-method').textContent = orderData.paymentMethod || 'Kartu Kredit/Debit (Visa/Mastercard)';
+                } else {
+                    // No order data found
+                    document.getElementById('order-items').innerHTML = '<p class="text-gray-500 text-center py-4">Tidak ada data pesanan</p>';
+                    // Optionally redirect back to checkout
+                    setTimeout(() => window.location.href = 'checkout.html', 2000);
+                }
+             });
+    </script>
+</body>
+</html>
